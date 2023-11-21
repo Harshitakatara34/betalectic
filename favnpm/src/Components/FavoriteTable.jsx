@@ -1,6 +1,7 @@
 // FavoritesTable.js
 import React, { useState } from 'react';
 import { FaEye, FaEdit, FaTrash, FaCheck, FaTimes } from 'react-icons/fa';
+import AddFavorite from './AddFavorite'; // Import the AddFavorite component for reusing the form
 
 const FavoritesTable = ({ favorites, onView, onEdit, onDelete }) => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -37,11 +38,14 @@ const FavoritesTable = ({ favorites, onView, onEdit, onDelete }) => {
   };
 
   const handleSaveEdit = () => {
+    // Update the edited data using the onEdit function
     onEdit({ ...editedFavorite, description: editedDescription });
+    // Close the edit modal
     setShowEditModal(false);
   };
 
   const handleCancelEdit = () => {
+    // Close the edit modal
     setShowEditModal(false);
   };
 
@@ -109,16 +113,12 @@ const FavoritesTable = ({ favorites, onView, onEdit, onDelete }) => {
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50">
           <div className="bg-white p-4 rounded shadow-md">
             <p className="text-lg font-bold mb-4">Editing Package: {editedFavorite.packageName}</p>
-            <textarea
-              placeholder="Edit Description"
-              className="border p-2 mb-4 w-full"
-              value={editedDescription}
-              onChange={(e) => setEditedDescription(e.target.value)}
+            <AddFavorite
+              onSubmit={handleSaveEdit}
+              initialPackage={editedFavorite.packageName}
+              initialDescription={editedDescription}
             />
             <div className="flex justify-end">
-              <button className="text-green-500 hover:underline mr-2" onClick={handleSaveEdit}>
-                <FaCheck />
-              </button>
               <button className="text-red-500 hover:underline" onClick={handleCancelEdit}>
                 <FaTimes />
               </button>
