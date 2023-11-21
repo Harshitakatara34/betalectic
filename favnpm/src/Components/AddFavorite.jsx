@@ -34,10 +34,13 @@ const AddFavorite = ({ onSubmit }) => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
+     
       {packages.length > 0 && (
         <div className="mb-4">
+        <h1>Results</h1>
           {packages.map((pkg) => (
             <div key={pkg.package.name} className="mb-2">
+           
               <input
                 type="radio"
                 id={pkg.package.name}
