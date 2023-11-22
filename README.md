@@ -2,6 +2,7 @@
 Deployed Link ==> https://655da1fc452b3a64b318c4aa--singular-pony-d12d10.netlify.app/
 ![Capture3](https://github.com/Harshitakatara34/betalectic/assets/112870595/541c6535-2015-403d-80ac-a45570819701)
 
+![Capture3](https://github.com/Harshitakatara34/betalectic/assets/112870595/64671d86-ec54-417e-aadf-9c7a56fbf830)
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
