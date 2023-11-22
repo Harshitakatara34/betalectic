@@ -1,4 +1,4 @@
-// Welcome.tsx
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -15,10 +15,10 @@ const Welcome: React.FC<WelcomeProps> = ({ onClickAdd }) => {
 <div
   className="flex flex-col items-center justify-center border-dotted border border-gray-500 p-4"
   style={{
-    height: "400px", // Change height to auto for responsiveness
+    height: "400px",
     margin: "70px auto",
     borderWidth: "2px",
-    width: "80%", // Adjusted width for responsiveness
+    width: "80%", 
     maxWidth: "600px",
   }}
 >

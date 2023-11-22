@@ -6,7 +6,7 @@ import EditModal from "./EditModal";
 import ViewModal from "./ViewModal";
 
 interface Favorite {
-  id: string; // Change the type if the id is of different type
+  id: string; 
   packageName: string;
   favoriteReason: string;
 }
@@ -22,7 +22,7 @@ const FavoritesTable: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load favorites from localStorage
+    
     const storedFavorites = JSON.parse(localStorage.getItem("favorites") || "[]") as Favorite[];
     setFavorites(storedFavorites);
   }, []);

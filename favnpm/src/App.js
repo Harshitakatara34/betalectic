@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Welcome from "./Components/Welcome";
+import React, { useState} from "react";
+import { Routes, Route } from "react-router-dom";
 import AddFavorite from "./Components/AddFavorite";
 import FavoritesTable from "./Components/FavoriteTable";
 
